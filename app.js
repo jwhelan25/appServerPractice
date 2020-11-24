@@ -7,7 +7,7 @@ const app = express()
 app.use(morgan('common'))
 
 app.get('/apps', (req, res) => {
-    const { sort, genres } = req.query;
+    const { sort, genres } = req.query
   
     if (sort) {
       if (!['Rating', 'App'].includes(sort)) {
@@ -26,7 +26,6 @@ app.get('/apps', (req, res) => {
     }
   
     let results = appList
-    //let results = JSON.parse(appList)
 
     
     if(sort==='App'){
